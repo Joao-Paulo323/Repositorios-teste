@@ -1,6 +1,6 @@
 ﻿namespace Controle_de_chamados.Formularios.ControleDeUsuario
 {
-    partial class MenuUsuario
+    partial class MenuSuporte
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSuporte));
             tlpMenuUsuario = new TableLayoutPanel();
             pictureBox1 = new PictureBox();
             btnNV = new Button();
@@ -37,11 +37,11 @@
             btnCC = new Button();
             btnCA = new Button();
             panel1 = new Panel();
-            lblNome = new Label();
-            label2 = new Label();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             label3 = new Label();
+            label2 = new Label();
+            label4 = new Label();
             tlpMenuUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -53,6 +53,7 @@
             tlpMenuUsuario.BackColor = Color.White;
             tlpMenuUsuario.ColumnCount = 1;
             tlpMenuUsuario.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tlpMenuUsuario.Controls.Add(label4, 0, 6);
             tlpMenuUsuario.Controls.Add(pictureBox1, 0, 0);
             tlpMenuUsuario.Controls.Add(btnNV, 0, 5);
             tlpMenuUsuario.Controls.Add(lblSuporteAtendimento, 0, 1);
@@ -73,8 +74,7 @@
             tlpMenuUsuario.RowStyles.Add(new RowStyle(SizeType.Absolute, 148F));
             tlpMenuUsuario.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
             tlpMenuUsuario.Size = new Size(201, 444);
-            tlpMenuUsuario.TabIndex = 2;
-            tlpMenuUsuario.Paint += tlpMenuUsuario_Paint;
+            tlpMenuUsuario.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -92,7 +92,7 @@
             btnNV.BackColor = Color.White;
             btnNV.Dock = DockStyle.Fill;
             btnNV.FlatStyle = FlatStyle.Flat;
-            btnNV.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNV.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnNV.ForeColor = Color.SeaGreen;
             btnNV.Location = new Point(3, 212);
             btnNV.Name = "btnNV";
@@ -100,7 +100,6 @@
             btnNV.TabIndex = 3;
             btnNV.Text = "Novo chamado";
             btnNV.UseVisualStyleBackColor = false;
-            btnNV.Click += btnNV_Click;
             // 
             // lblSuporteAtendimento
             // 
@@ -118,7 +117,7 @@
             btnMC.BackColor = Color.SeaGreen;
             btnMC.Dock = DockStyle.Fill;
             btnMC.FlatStyle = FlatStyle.Flat;
-            btnMC.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMC.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMC.ForeColor = Color.White;
             btnMC.Location = new Point(3, 60);
             btnMC.Name = "btnMC";
@@ -126,13 +125,12 @@
             btnMC.TabIndex = 2;
             btnMC.Text = "Meus Chamados";
             btnMC.UseVisualStyleBackColor = false;
-            btnMC.Click += btnMC_Click;
             // 
             // btnCC
             // 
             btnCC.Dock = DockStyle.Fill;
             btnCC.FlatStyle = FlatStyle.Flat;
-            btnCC.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCC.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCC.ForeColor = Color.SeaGreen;
             btnCC.Location = new Point(3, 162);
             btnCC.Name = "btnCC";
@@ -140,7 +138,6 @@
             btnCC.TabIndex = 6;
             btnCC.Text = "Chamados Concluidos";
             btnCC.UseVisualStyleBackColor = true;
-            btnCC.Click += btnCC_Click;
             // 
             // btnCA
             // 
@@ -154,11 +151,9 @@
             btnCA.TabIndex = 5;
             btnCA.Text = "Chamados em Andamento";
             btnCA.UseVisualStyleBackColor = true;
-            btnCA.Click += btnCA_Click;
             // 
             // panel1
             // 
-            panel1.Controls.Add(lblNome);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(iconPictureBox1);
             panel1.Controls.Add(label1);
@@ -168,30 +163,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(195, 31);
             panel1.TabIndex = 9;
-            // 
-            // lblNome
-            // 
-            lblNome.Anchor = AnchorStyles.None;
-            lblNome.AutoSize = true;
-            lblNome.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNome.ForeColor = Color.SeaGreen;
-            lblNome.Location = new Point(46, -1);
-            lblNome.Name = "lblNome";
-            lblNome.Size = new Size(104, 32);
-            lblNome.TabIndex = 10;
-            lblNome.Text = "         Olá\r\n(Nome Usuario)";
-            // 
-            // label2
-            // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.SeaGreen;
-            label2.Location = new Point(43, -36);
-            label2.Name = "label2";
-            label2.Size = new Size(104, 32);
-            label2.TabIndex = 8;
-            label2.Text = "         Olá\r\n(Nome Usuario)";
             // 
             // iconPictureBox1
             // 
@@ -212,7 +183,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(40, -71);
+            label1.Location = new Point(43, -36);
             label1.Name = "label1";
             label1.Size = new Size(104, 32);
             label1.TabIndex = 4;
@@ -224,20 +195,43 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.SeaGreen;
-            label3.Location = new Point(37, -106);
+            label3.Location = new Point(40, -71);
             label3.Name = "label3";
             label3.Size = new Size(104, 32);
             label3.TabIndex = 4;
             label3.Text = "         Olá\r\n(Nome Usuario)";
             // 
-            // MenuUsuario
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.SeaGreen;
+            label2.Location = new Point(46, -1);
+            label2.Name = "label2";
+            label2.Size = new Size(104, 32);
+            label2.TabIndex = 8;
+            label2.Text = "         Olá\r\n(Nome Usuario)";
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Bottom;
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ControlDarkDark;
+            label4.Location = new Point(71, 392);
+            label4.Name = "label4";
+            label4.Size = new Size(58, 15);
+            label4.TabIndex = 10;
+            label4.Text = "(Suporte)";
+            // 
+            // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tlpMenuUsuario);
-            Name = "MenuUsuario";
+            Name = "Menu";
             Size = new Size(201, 444);
-            Load += MenuUsuario_Load;
             tlpMenuUsuario.ResumeLayout(false);
             tlpMenuUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -257,10 +251,10 @@
         private Button btnCC;
         private Button btnCA;
         private Panel panel1;
-        private Label label2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Label label1;
         private Label label3;
-        private Label lblNome;
+        private Label label2;
+        private Label label4;
     }
 }

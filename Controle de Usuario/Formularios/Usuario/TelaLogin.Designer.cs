@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -50,7 +49,7 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.AutoSize = true;
-            tableLayoutPanel1.BackColor = Color.AntiqueWhite;
+            tableLayoutPanel1.BackColor = Color.FromArgb(51, 65, 85);
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 245F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 326F));
@@ -80,7 +79,7 @@
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.BackColor = Color.White;
+            tableLayoutPanel2.BackColor = Color.FromArgb(30, 41, 59);
             tableLayoutPanel2.ColumnCount = 3;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 6.22406626F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 93.77593F));
@@ -113,7 +112,7 @@
             // 
             lblAcesseconta.Anchor = AnchorStyles.None;
             lblAcesseconta.AutoSize = true;
-            lblAcesseconta.ForeColor = SystemColors.ControlDarkDark;
+            lblAcesseconta.ForeColor = Color.White;
             lblAcesseconta.Location = new Point(111, 61);
             lblAcesseconta.Name = "lblAcesseconta";
             lblAcesseconta.Size = new Size(97, 15);
@@ -125,7 +124,7 @@
             lblNomeUsuario.Anchor = AnchorStyles.Left;
             lblNomeUsuario.AutoSize = true;
             lblNomeUsuario.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNomeUsuario.ForeColor = SystemColors.ControlDarkDark;
+            lblNomeUsuario.ForeColor = Color.White;
             lblNomeUsuario.Location = new Point(21, 85);
             lblNomeUsuario.Name = "lblNomeUsuario";
             lblNomeUsuario.Size = new Size(108, 15);
@@ -135,10 +134,10 @@
             // Logo
             // 
             Logo.Anchor = AnchorStyles.None;
-            Logo.Image = (Image)resources.GetObject("Logo.Image");
-            Logo.Location = new Point(83, 3);
+            Logo.Image = Properties.Resources.HelpDesk_TI_43px_transparente;
+            Logo.Location = new Point(101, 3);
             Logo.Name = "Logo";
-            Logo.Size = new Size(153, 51);
+            Logo.Size = new Size(117, 51);
             Logo.TabIndex = 0;
             Logo.TabStop = false;
             // 
@@ -159,7 +158,7 @@
             // 
             lblSenha.AutoSize = true;
             lblSenha.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSenha.ForeColor = SystemColors.ControlDarkDark;
+            lblSenha.ForeColor = Color.White;
             lblSenha.Location = new Point(21, 138);
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(46, 15);
@@ -181,7 +180,7 @@
             // btnEntrar
             // 
             btnEntrar.Anchor = AnchorStyles.Top;
-            btnEntrar.BackColor = Color.SeaGreen;
+            btnEntrar.BackColor = Color.FromArgb(13, 148, 136);
             btnEntrar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEntrar.ForeColor = SystemColors.ButtonHighlight;
             btnEntrar.Location = new Point(21, 194);
@@ -195,12 +194,13 @@
             // 
             lblCadastro.Anchor = AnchorStyles.Top;
             lblCadastro.AutoSize = true;
-            lblCadastro.ForeColor = SystemColors.ControlDarkDark;
-            lblCadastro.Location = new Point(67, 238);
+            lblCadastro.ForeColor = Color.White;
+            lblCadastro.Location = new Point(54, 238);
             lblCadastro.Name = "lblCadastro";
-            lblCadastro.Size = new Size(186, 15);
+            lblCadastro.Size = new Size(212, 15);
             lblCadastro.TabIndex = 7;
-            lblCadastro.Text = "Não tem uma conta? Cadastre-se!";
+            lblCadastro.Text = "Não tem uma conta? Cadastre-se aqui!";
+            lblCadastro.Click += lblCadastro_Click;
             // 
             // button1
             // 

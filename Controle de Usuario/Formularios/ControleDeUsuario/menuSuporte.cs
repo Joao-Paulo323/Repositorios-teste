@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Controle_de_chamados.Formularios
+namespace Controle_de_chamados.Formularios.ControleDeUsuario
 {
-    public partial class Cadastro : Form
+    public partial class MenuSuporte : UserControl
     {
-        public Cadastro()
+        public MenuSuporte()
         {
             InitializeComponent();
         }

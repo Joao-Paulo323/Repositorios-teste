@@ -33,6 +33,7 @@
             // 
             // tlpMainUser
             // 
+            tlpMainUser.BackColor = Color.FromArgb(51, 65, 85);
             tlpMainUser.ColumnCount = 2;
             tlpMainUser.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 201F));
             tlpMainUser.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));

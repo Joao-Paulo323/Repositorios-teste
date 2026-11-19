@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Controle_de_chamados.Formularios.ControleDeUsuario
 {
-    public partial class TelaMC : UserControl
+    public partial class ChamadosEmAndamento : UserControl
     {
-        public TelaMC()
+        public ChamadosEmAndamento()
         {
             InitializeComponent();
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MeusChamados));
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel3 = new TableLayoutPanel();
             label1 = new Label();
             label2 = new Label();
-            txtTitulo = new TextBox();
             panel2 = new Panel();
             cmbCategoria = new ComboBox();
             cmbPrioridade = new ComboBox();
@@ -45,7 +45,9 @@
             panel4 = new Panel();
             btnConfirmar = new Button();
             btnVoltar = new Button();
+            txtTitulo = new TextBox();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             btnIVoltar = new FontAwesome.Sharp.IconButton();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -54,6 +56,7 @@
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -69,12 +72,13 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10.7981224F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 89.20188F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Size = new Size(599, 450);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.BackColor = Color.AntiqueWhite;
+            tableLayoutPanel2.BackColor = Color.FromArgb(51, 65, 85);
             tableLayoutPanel2.ColumnCount = 3;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.9642849F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 83.03571F));
@@ -89,10 +93,11 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 61F));
             tableLayoutPanel2.Size = new Size(593, 396);
             tableLayoutPanel2.TabIndex = 0;
+            tableLayoutPanel2.Paint += tableLayoutPanel2_Paint;
             // 
             // tableLayoutPanel3
             // 
-            tableLayoutPanel3.BackColor = Color.White;
+            tableLayoutPanel3.BackColor = Color.FromArgb(30, 41, 59);
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
@@ -125,7 +130,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.SeaGreen;
+            label1.ForeColor = Color.FromArgb(45, 212, 191);
             label1.Location = new Point(144, 0);
             label1.Name = "label1";
             label1.Size = new Size(116, 18);
@@ -136,20 +141,12 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(3, 31);
             label2.Name = "label2";
             label2.Size = new Size(115, 16);
             label2.TabIndex = 1;
             label2.Text = "Titulo do Problema";
-            // 
-            // txtTitulo
-            // 
-            txtTitulo.ForeColor = SystemColors.WindowFrame;
-            txtTitulo.Location = new Point(3, 60);
-            txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(277, 23);
-            txtTitulo.TabIndex = 4;
-            txtTitulo.Text = "Ex:Impressora não Funciona";
             // 
             // panel2
             // 
@@ -193,6 +190,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
             label5.Location = new Point(256, 0);
             label5.Name = "label5";
             label5.Size = new Size(65, 16);
@@ -203,6 +201,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(31, 0);
             label3.Name = "label3";
             label3.Size = new Size(62, 16);
@@ -213,6 +212,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(3, 166);
             label4.Name = "label4";
             label4.Size = new Size(65, 16);
@@ -241,7 +241,7 @@
             // 
             // btnConfirmar
             // 
-            btnConfirmar.BackColor = Color.SeaGreen;
+            btnConfirmar.BackColor = Color.FromArgb(13, 148, 136);
             btnConfirmar.FlatStyle = FlatStyle.Flat;
             btnConfirmar.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConfirmar.ForeColor = Color.White;
@@ -254,7 +254,7 @@
             // 
             // btnVoltar
             // 
-            btnVoltar.BackColor = Color.SeaGreen;
+            btnVoltar.BackColor = Color.FromArgb(13, 148, 136);
             btnVoltar.FlatStyle = FlatStyle.Flat;
             btnVoltar.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = Color.White;
@@ -265,9 +265,19 @@
             btnVoltar.Text = "VOLTAR";
             btnVoltar.UseVisualStyleBackColor = false;
             // 
+            // txtTitulo
+            // 
+            txtTitulo.ForeColor = SystemColors.WindowFrame;
+            txtTitulo.Location = new Point(3, 60);
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(277, 23);
+            txtTitulo.TabIndex = 4;
+            txtTitulo.Text = "Ex:Impressora não Funciona";
+            // 
             // panel1
             // 
-            panel1.BackColor = Color.SeaGreen;
+            panel1.BackColor = Color.FromArgb(13, 148, 136);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(btnIVoltar);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
@@ -276,9 +286,21 @@
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(13, 148, 136);
+            pictureBox1.Dock = DockStyle.Right;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(473, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(120, 42);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
             // btnIVoltar
             // 
-            btnIVoltar.BackColor = Color.SeaGreen;
+            btnIVoltar.BackColor = Color.FromArgb(13, 148, 136);
             btnIVoltar.Dock = DockStyle.Left;
             btnIVoltar.FlatStyle = FlatStyle.Flat;
             btnIVoltar.ForeColor = Color.SeaGreen;
@@ -308,6 +330,8 @@
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -332,5 +356,6 @@
         private Button btnConfirmar;
         private Button btnVoltar;
         private FontAwesome.Sharp.IconButton btnIVoltar;
+        private PictureBox pictureBox1;
     }
 }

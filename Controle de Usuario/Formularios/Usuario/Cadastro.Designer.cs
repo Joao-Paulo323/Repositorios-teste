@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -49,7 +48,7 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.AutoSize = true;
-            tableLayoutPanel1.BackColor = Color.AntiqueWhite;
+            tableLayoutPanel1.BackColor = Color.FromArgb(51, 65, 85);
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 245F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 326F));
@@ -65,6 +64,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 107F));
             tableLayoutPanel1.Size = new Size(800, 450);
             tableLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // panel1
             // 
@@ -77,7 +77,7 @@
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.BackColor = Color.White;
+            tableLayoutPanel2.BackColor = Color.FromArgb(30, 41, 59);
             tableLayoutPanel2.ColumnCount = 3;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 6.22406626F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 93.77593F));
@@ -109,7 +109,7 @@
             // 
             lblCadastreconta.Anchor = AnchorStyles.None;
             lblCadastreconta.AutoSize = true;
-            lblCadastreconta.ForeColor = SystemColors.ControlDarkDark;
+            lblCadastreconta.ForeColor = Color.White;
             lblCadastreconta.Location = new Point(106, 61);
             lblCadastreconta.Name = "lblCadastreconta";
             lblCadastreconta.Size = new Size(107, 15);
@@ -119,7 +119,7 @@
             // Logo2
             // 
             Logo2.Anchor = AnchorStyles.None;
-            Logo2.Image = (Image)resources.GetObject("Logo2.Image");
+            Logo2.Image = Properties.Resources.HelpDesk_TI_43px_transparente;
             Logo2.Location = new Point(83, 3);
             Logo2.Name = "Logo2";
             Logo2.Size = new Size(153, 51);
@@ -141,7 +141,7 @@
             // 
             lblSenha2.AutoSize = true;
             lblSenha2.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSenha2.ForeColor = SystemColors.ControlDarkDark;
+            lblSenha2.ForeColor = Color.White;
             lblSenha2.Location = new Point(21, 138);
             lblSenha2.Name = "lblSenha2";
             lblSenha2.Size = new Size(46, 15);
@@ -162,7 +162,7 @@
             // btnEntrar2
             // 
             btnEntrar2.Anchor = AnchorStyles.Top;
-            btnEntrar2.BackColor = Color.SeaGreen;
+            btnEntrar2.BackColor = Color.FromArgb(13, 148, 136);
             btnEntrar2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEntrar2.ForeColor = SystemColors.ButtonHighlight;
             btnEntrar2.Location = new Point(21, 194);
@@ -178,20 +178,21 @@
             btnVoltar.BackColor = Color.Transparent;
             btnVoltar.BackgroundImageLayout = ImageLayout.None;
             btnVoltar.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnVoltar.ForeColor = Color.SeaGreen;
+            btnVoltar.ForeColor = Color.FromArgb(13, 148, 136);
             btnVoltar.Location = new Point(98, 241);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(123, 26);
             btnVoltar.TabIndex = 7;
             btnVoltar.Text = "Voltar\r\n";
             btnVoltar.UseVisualStyleBackColor = false;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // lblNomeUsuario2
             // 
             lblNomeUsuario2.Anchor = AnchorStyles.Left;
             lblNomeUsuario2.AutoSize = true;
             lblNomeUsuario2.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNomeUsuario2.ForeColor = SystemColors.ControlDarkDark;
+            lblNomeUsuario2.ForeColor = Color.White;
             lblNomeUsuario2.Location = new Point(21, 85);
             lblNomeUsuario2.Name = "lblNomeUsuario2";
             lblNomeUsuario2.Size = new Size(108, 15);
